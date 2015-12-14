@@ -1,0 +1,42 @@
+En un archivo viene la informacion del personaje de un unico registro
+Xpi  Xpd   Ypd
+Real Real  Real
+Se supone que el valor de Ypi =0.Estos valores definen la envolvente de un personaje
+En un segundo archivo se leen los ataques junto con la accion del personaje.
+
+Id_ataque  Xii   Yii   Xsd  Ysd  Energia  Accion
+Cadena     Real  Real  Real Real Real     Caracter
+
+El personaje comienza con una energia inicial de 100.Cada vez que el ataque colisione
+con la envolvente del personaje se le restara a este la energia del ataque.
+Si el valor de la energia es <=0 el personaje desaparece y no hay colision posible.
+Si el valor del  campo acccion es:
+
+N (Nada) :Mantiene los valores de la envolvente
+S(Salta) :Sube 5 unidades la base del personaje y mantien la envolvente
+A(Agacharse) : Reduce en 10 unidades la altura de la envolvente
+C (Combinado):Sube en 5 unidades la base del personaje y reduce la envolvevente en 10
+
+El desplazamiento de los ataques siempre es horizontal (de izquierda a derecha)
+Debe generarse una salida por pantalla std que muestre ataques colisonaron con el 
+personaje.En caso de haber colision de mostrarse Id_ataque,distancia,energia restante.
+Si la energia es <=0 debe mostrarse Id ataque y un mensaje de "no colisiona" con los ataques restantes.
+Si no hay colision mostrar Id ataque y un mensaje de "no colisiona"
+
+
+
+Nota de autor :La envolvente del personaje es el rectangulo que definen las coordenadad (Xpi,Xpd) y (Ypi,Ypd)
+La distancia se considera como la diferencia entre Xpi del personaje y Xsd del ataque.
+Puede haber casos en que el ataque empieze a la derecha del personaje(en ese caso no colisona)
+Puede habar casos en que el ataque empieze a la izquierda del eje de coordenadas (valores negativos de x)
+No habra casos con valores de "y" negativos o inferiorees a la altura de la envolvente.
+
+Dan 2:30 para resolverlo , la dudas se aclaran en una charla previa bien explicada.
+Recomendacion :Saberse como agua la lectura de archivos y lectura de achivos de registros de longitud variables(no es este caso ,pero lo toman).
+Ir a entrenar a las maquinas de la facu.Hacer parciales anteriores (la instancia anterior tomo inteseccion con una recta y el 50 % desaprobo)
+Saber la parte fisica (pitagoras,colision contra una recta,colisiones).
+En esta oportunidad rindieron 20 alumnos y solo 4 o 5 desaprobaron.
+No olvidar anotarse en el sistema para que te reserven la maquina.
+Exitos y nos vemos en taller II.
+Marcos Riarte
+  
