@@ -1,0 +1,14 @@
+Personajes
+id x y vida
+
+Enemigos
+x y poderDeAtaque
+
+Tablero 100 x 100.
+Cada enemigo ataca dentro del rango (8 casilleros adyacentes)
+
+En cada loop, el personaje se mueve hacia la derecha hasta chocar con un enemigo o el final del mapa.
+Se procesan ataques y se cuentan ciclos de vida (# casilleros que se mueve el personaje)
+
+Termina cuando se mueren todos o llegan al final. Cuando termina-> imprimo por orden de cantidad de ciclos vividos
+
